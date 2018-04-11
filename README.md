@@ -4,7 +4,7 @@ echo "# New thing" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/KishimotoKuroCrow/Project.git
+curl -u 'git-username' https://api.github.com/user/repos -d "{\"name\":\"Repo-Name\"}"
 git push -u origin master
 
 
