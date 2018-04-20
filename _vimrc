@@ -37,6 +37,9 @@ map <F3> @: <CR>
 " F4 -> remove all the whitespaces at the end of all lines and save
 map <F4> :%s/\s\+$//g <CR>
 
+" Enter -> insert empty line without entering in insert mode
+map <CR> o<ESC>
+
 " :Clear -> clear buffer selection
 command Clear let @/="" 
 
