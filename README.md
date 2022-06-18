@@ -1,14 +1,15 @@
-Create a New Repo on Github
-----------------------------
-echo "# New thing" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-curl -u 'git-username' https://api.github.com/user/repos -d "{\"name\":\"Repo-Name\"}"
-git push -u origin master
+1) Install git and github-cli
 
+2) Create a repository (TmpExample) and follow the interactive instruction.
+Answer "yes" to clone the repository
 
-Push existing file
--------------------
-git push -u origin master
+$> gh repo create
 
+3) Create a new README.md file with info in TmpExample.
+
+4) Add the new file (README.md), set a commit message, and push it to
+the Github server.
+
+$> git add README.md
+$> git commit -m "First Commit"
+$> git push --set-upstream origin HEAD
