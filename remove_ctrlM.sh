@@ -25,7 +25,7 @@ fi
 # Loop through all the files
 for f in "$@"
 do
-   if [ -f ${f}]; then
+   if [ -f ${f} ]; then
       RemoveMetaChar ${f}
    fi
 done
