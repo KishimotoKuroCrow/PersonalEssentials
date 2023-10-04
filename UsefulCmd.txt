@@ -1,0 +1,29 @@
+look at /var/syslog
+systemctl --failed
+systemctl list-units --type service --state running,failed,active
+journalctl -xe
+dmesg | grep 
+iw dev
+bmon = network traffic monitor in terminal
+glances = network + IO + machine monitor
+tmux (Ctrl+b, d: detach)
+   tmux attach
+
+pacman -Qqe > all_installed_pkg.txt
+pacman -Qqen > all_inst_noAUR.txt
+pacman -Qe > all_installed_pkg_version.txt
+
+parted device print free
+resizepart <device> <partition_num> <new_length in 512-byte from parted print>
+resize2fs <device/partition>
+
+lsblk
+blkid
+
+wpa_passphrase SSID pwd | tee /etc/temp_cli_login.conf
+wpa_supplicant -c /etc/temp_cli_login.conf -i wlan0 &
+
+export http_proxy="http://user:pwd@proxyURL:port"
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export all_proxy=$http_proxy
