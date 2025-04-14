@@ -48,3 +48,11 @@ command Clearfile :%d
 
 " :ClearUndo -> Clears the undo tree
 command ClearUndo :set undoreload=0 | edit
+
+" Change cursor shape for different modes
+" Vertical for insert
+let &t_SI = "\<Esc>[6 q"
+" Underline for replace
+let &t_SR = "\<Esc>[4 q"
+" Block for everything else
+let &t_EI = "\<Esc>[2 q"

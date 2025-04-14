@@ -4,8 +4,8 @@ syntax on
 au BufNewFile,BufRead *.sv set filetype=verilog
 au BufNewFile,BufRead *.cpp.* set filetype=cpp
 
-set fileformats=unix
-set guifont=Courier\ New:h8
+set fileformats=dos
+set guifont=Courier\ New:h10
 set showmatch
 set nowrap
 set viminfo=
@@ -37,8 +37,8 @@ map <F3> @: <CR>
 " F4 -> remove all the whitespaces at the end of all lines and save
 map <F4> :%s/\s\+$//g <CR>
 
-" Enter -> insert empty line without going in insert mode
-nmap <CR> o<ESC>
+" Enter -> insert empty line without entering in insert mode
+map <CR> o<ESC>
 
 " :Clear -> clear buffer selection
 command Clear let @/="" 
@@ -48,3 +48,11 @@ command Clearfile :%d
 
 " :ClearUndo -> Clears the undo tree
 command ClearUndo :set undoreload=0 | edit
+
+" Change cursor shape for different modes
+" Vertical for insert
+let &t_SI = "\<Esc>[6 q"
+" Underline for replace
+let &t_SR = "\<Esc>[4 q"
+" Block for everything else
+let &t_EI = "\<Esc>[2 q"
